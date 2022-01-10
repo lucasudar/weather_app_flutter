@@ -33,23 +33,23 @@ class _WeatherForecastPageState extends State<WeatherForecastPage> {
     weatherForecast.add(DayHeading(itCurrentDay)); // first heading
     List<ListItem> weatherData = [
       Weather(itCurrentDay, 20, 90, "04d"),
-      Weather(itCurrentDay.add(Duration(hours: 3)), 23, 50, "03d"),
-      Weather(itCurrentDay.add(Duration(hours: 6)), 25, 50, "02d"),
-      Weather(itCurrentDay.add(Duration(hours: 9)), 28, 50, "01d"),
-      Weather(itCurrentDay.add(Duration(hours: 12)), 28, 60, "04d"),
-      Weather(itCurrentDay.add(Duration(hours: 15)), 28, 60, "03d"),
-      Weather(itCurrentDay.add(Duration(hours: 18)), 28, 60, "10d"),
-      Weather(itCurrentDay.add(Duration(hours: 21)), 28, 60, "01d"),
-      Weather(itCurrentDay.add(Duration(hours: 24)), 28, 60, "04d"),
-      Weather(itCurrentDay.add(Duration(hours: 27)), 28, 60, "03d"),
-      Weather(itCurrentDay.add(Duration(hours: 30)), 28, 60, "10d"),
-      Weather(itCurrentDay.add(Duration(hours: 33)), 28, 60, "02d"),
-      Weather(itCurrentDay.add(Duration(hours: 36)), 28, 60, "03d"),
-      Weather(itCurrentDay.add(Duration(hours: 39)), 28, 60, "10d"),
-      Weather(itCurrentDay.add(Duration(hours: 42)), 28, 60, "02d"),
-      Weather(itCurrentDay.add(Duration(hours: 45)), 28, 60, "02d")
+      Weather(itCurrentDay.add(const Duration(hours: 3)), 23, 50, "03d"),
+      Weather(itCurrentDay.add(const Duration(hours: 6)), 25, 50, "02d"),
+      Weather(itCurrentDay.add(const Duration(hours: 9)), 28, 50, "01d"),
+      Weather(itCurrentDay.add(const Duration(hours: 12)), 28, 60, "04d"),
+      Weather(itCurrentDay.add(const Duration(hours: 15)), 28, 60, "03d"),
+      Weather(itCurrentDay.add(const Duration(hours: 18)), 28, 60, "10d"),
+      Weather(itCurrentDay.add(const Duration(hours: 21)), 28, 60, "01d"),
+      Weather(itCurrentDay.add(const Duration(hours: 24)), 28, 60, "04d"),
+      Weather(itCurrentDay.add(const Duration(hours: 27)), 28, 60, "03d"),
+      Weather(itCurrentDay.add(const Duration(hours: 30)), 28, 60, "10d"),
+      Weather(itCurrentDay.add(const Duration(hours: 33)), 28, 60, "02d"),
+      Weather(itCurrentDay.add(const Duration(hours: 36)), 28, 60, "03d"),
+      Weather(itCurrentDay.add(const Duration(hours: 39)), 28, 60, "10d"),
+      Weather(itCurrentDay.add(const Duration(hours: 42)), 28, 60, "02d"),
+      Weather(itCurrentDay.add(const Duration(hours: 45)), 28, 60, "02d")
     ];
-    var itNextDay = DateTime.now().add(Duration(days: 1));
+    var itNextDay = DateTime.now().add(const Duration(days: 1));
     itNextDay = DateTime(
         itNextDay.year, itNextDay.month, itNextDay.day, 0, 0, 0, 0, 1);
     var iterator = weatherData.iterator;

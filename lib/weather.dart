@@ -4,11 +4,10 @@ import 'package:intl/intl.dart';
 abstract class ListItemWidget {}
 
 class WeatherListItem extends StatelessWidget implements ListItemWidget {
+  const WeatherListItem(this.weather, {Key? key}) : super(key: key);
   static final _dateFormat = DateFormat('yyyy-MM-dd – HH:mm');
 
   final Weather weather;
-
-  const WeatherListItem(this.weather);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +25,11 @@ class WeatherListItem extends StatelessWidget implements ListItemWidget {
 }
 
 class HeadingListItem extends StatelessWidget implements ListItemWidget {
+  const HeadingListItem(this.dayHeading, {Key? key}) : super(key: key);
+
   static final _dateFormatWeekDay = DateFormat('EEEE');
   final DayHeading dayHeading;
 
-  const HeadingListItem(this.dayHeading);
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,9 @@ class HeadingListItem extends StatelessWidget implements ListItemWidget {
       title: Column(children: [
         Text(
           "${_dateFormatWeekDay.format(dayHeading.dateTime)} ${dayHeading.dateTime.day}.${dayHeading.dateTime.month}",
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headline6,
         ),
-        Divider()
+        const Divider()
       ]),
     );
   }
